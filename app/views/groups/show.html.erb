@@ -1,0 +1,25 @@
+<p>
+  <strong>Category:</strong>
+  <%= @group.title %>
+</p>
+<% @group.bookmarks.each do |bookmark| %>
+
+  <%= bookmark.bmark %>
+  <%= link_to 'Delete', [bookmark.group, bookmark],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+  <p>
+
+<% end %>
+
+<h2>Add a Bookmark</h2>
+<%= form_with(model: [ @group, @group.bookmarks.build ], local: true) do |form| %>
+  <p>
+    <%= form.text_field :bmark %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', groups_path %>

@@ -1,0 +1,14 @@
+<h2>Edit Group</h2>
+
+<%= form_with(model: @group) do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+
+<%= link_to 'Back', groups_path %>
