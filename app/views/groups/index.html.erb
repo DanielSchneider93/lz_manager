@@ -1,20 +1,21 @@
 <div id="box">
 
-<h2>Bookmarks</h2>
+<h3>Bookmarks</h3>
 
 <table>
   <% @group.each do |group| %>
     <tr>
       <td><%= group.title %></td>
+
       <td><% group.bookmarks.each do |bookmark| %>
       <%= bookmark.bmark %>
       <% end %></td>
-
       <td><%= link_to 'Show', group_path(group) %></td>
       <td><%= link_to 'Edit', edit_group_path(group) %></td>
       <td><%= link_to 'Delete', group_path(group),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
+
 
     </tr>
 
