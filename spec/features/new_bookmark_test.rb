@@ -8,6 +8,7 @@ describe Group do
   end
 
   it 'creates new bookmark' do
+    
     puts "\n Go to Group Path for new Group"
     visit group_path(@group)
 

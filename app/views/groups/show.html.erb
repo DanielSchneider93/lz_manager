@@ -1,18 +1,21 @@
-<div id="box">
 <p>
   <strong>Category:</strong>
   <%= @group.title %>
+  <table>
 </p>
 <% @group.bookmarks.each do |bookmark| %>
-
-  <%= bookmark.bmark %>
+<tr>
+  <td><%= bookmark.bmark %></td>
+  <td>
   <%= link_to 'Delete', [bookmark.group, bookmark],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
+  </td>
   <p>
-
+</tr>
 <% end %>
 
+</table>
 <h3>Add a Bookmark to <%= @group.title%></h3>
 <%= form_with(model: [ @group, @group.bookmarks.build ], local: true) do |form| %>
   <p>
@@ -24,4 +27,3 @@
 <% end %>
 
 <%= link_to 'Back', groups_path %>
-</div>

@@ -8,7 +8,7 @@ describe Group do
   end
 
   it 'delete Group' do
-
+    
     puts "\n Click delete Group Link"
     visit root_path
     click_on 'delete_group'

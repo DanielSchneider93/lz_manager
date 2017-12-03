@@ -1,5 +1,4 @@
-<div id="box">
-<h2>Edit Group <%= @group.title%></h2>
+<h3>Edit Group <%= @group.title%></h3>
 
 <%= form_with(model: @group) do |form| %>
   <p>
@@ -12,4 +11,3 @@
 <% end %>
 
 <%= link_to 'Back', groups_path %>
-</div>

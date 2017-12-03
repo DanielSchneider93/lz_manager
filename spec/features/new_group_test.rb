@@ -8,6 +8,7 @@ describe Group do
   end
 
   it 'shows the Group on the Show Page' do
+    
     puts "\n Go to Group Page"
     visit group_path(@group)
 
