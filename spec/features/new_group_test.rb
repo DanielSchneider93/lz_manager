@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Group do
 
   before :each do
-    @group = Group.create(title: 'Work')
+    @group = Group.create(title: 'Test')
   end
 
   it 'shows the Group on the Show Page' do

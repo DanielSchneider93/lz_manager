@@ -13,10 +13,10 @@
 
 <% end %>
 
-<h2>Add a Bookmark</h2>
+<h3>Add a Bookmark to <%= @group.title%></h3>
 <%= form_with(model: [ @group, @group.bookmarks.build ], local: true) do |form| %>
   <p>
-    <%= form.text_field :bmark %>
+    <%= form.text_field :bmark, id:"text_field_id" %>
   </p>
   <p>
     <%= form.submit %>
