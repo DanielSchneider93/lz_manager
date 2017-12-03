@@ -14,6 +14,6 @@ describe Group do
     click_on 'delete_group'
 
     puts "\n Check if Group is deleted"
-    expect(page).to_not have_content(@group.title)
+    expect(page).to_ have_content(@group.title)
   end
 end

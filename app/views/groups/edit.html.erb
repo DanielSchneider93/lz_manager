@@ -1,10 +1,9 @@
 <div id="box">
-<h2>Edit Group</h2>
+<h2>Edit Group <%= @group.title%></h2>
 
 <%= form_with(model: @group) do |form| %>
   <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, id:"edit_field_id" %>
   </p>
   <p>
     <%= form.submit %>
