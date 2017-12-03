@@ -2,4 +2,7 @@ language: ruby
 rvm:
   - 2.4
 script:
-  - bundle exec rspec spec
+  - bundle exec rspec spec/features/delete_group_test.rb
+  - bundle exec rspec spec/features/edit_group_test.rb
+  - bundle exec rspec spec/features/new_bookmark_test.rb
+  - bundle exec rspec spec/features/new_group_test.rb
