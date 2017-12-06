@@ -5,7 +5,7 @@
 </p>
 <% @group.bookmarks.each do |bookmark| %>
 <tr>
-  <td><%= bookmark.bmark %></td>
+  <td><a target="_blank" href="http://<%= bookmark.bmark %>"><%= bookmark.bmark %></a></td>
   <td>
   <%= link_to 'Delete', [bookmark.group, bookmark],
                method: :delete,
