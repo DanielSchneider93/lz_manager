@@ -13,7 +13,6 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-ActiveRecord::Migration.maintain_test_schema!
 require 'capybara/rspec'
 
 RSpec.configure do |config|
