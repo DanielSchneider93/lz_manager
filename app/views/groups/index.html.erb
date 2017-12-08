@@ -6,6 +6,7 @@
       <td><%= group.title %></td>
 
       <td><% group.bookmarks.each do |bookmark| %>
+        <img src="http://<%= bookmark.bmark %>/favicon.ico" height="16" width="16">
         <a target="_blank" href="http://<%= bookmark.bmark %>"><%= bookmark.bmark %></a>
       <% end %></td>
       <td><%= link_to 'Show', group_path(group) %></td>

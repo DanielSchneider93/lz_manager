@@ -5,7 +5,10 @@
 </p>
 <% @group.bookmarks.each do |bookmark| %>
 <tr>
-  <td><a target="_blank" href="http://<%= bookmark.bmark %>"><%= bookmark.bmark %></a></td>
+
+  <td>
+    <img src="http://<%= bookmark.bmark %>/favicon.ico" height="16" width="16">
+    <a target="_blank" href="http://<%= bookmark.bmark %>"><%= bookmark.bmark %></a></td>
   <td>
   <%= link_to 'Delete', [bookmark.group, bookmark],
                method: :delete,
