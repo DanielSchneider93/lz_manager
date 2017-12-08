@@ -5,3 +5,12 @@ script:
   - bundle exec rails db:migrate
   - bundle exec rails db:migrate RAILS_ENV=test
   - bundle exec rspec spec
+
+deploy:
+  provider: heroku
+  api_key:
+  secure: "02cf342b-7fa1-45bc-963c-6e39ebc5377f"
+  run:
+      - bundle exec rails db:migrate
+      - bundle exec rails db:migrate RAILS_ENV=test
+      - bundle exec rspec spec
