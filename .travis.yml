@@ -5,6 +5,7 @@ script:
 - bundle exec rails db:migrate
 - bundle exec rails db:migrate RAILS_ENV=test
 - bundle exec rspec spec
+
 deploy:
   provider: heroku
   api_key:
@@ -12,3 +13,4 @@ deploy:
   app: lzmanager
   on:
     repo: DanielSchneider93/lz_manager
+  run:  bundle exec rails db:migrate
