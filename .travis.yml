@@ -1,16 +1,16 @@
 language: ruby
 rvm:
-  - 2.4
+- 2.4
 script:
-  - bundle exec rails db:migrate
-  - bundle exec rails db:migrate RAILS_ENV=test
-  - bundle exec rspec spec
-
+- bundle exec rails db:migrate
+- bundle exec rails db:migrate RAILS_ENV=test
+- bundle exec rspec spec
 deploy:
   provider: heroku
   api_key:
-  secure: "02cf342b-7fa1-45bc-963c-6e39ebc5377f"
+  secure: XZ4DpYMuxR8GLQGKvqQfvmGVkaUko+iuloYpTgy8lLj7Llne8WG9AZHr/aTSrNjphsVJTVasqnxxazSahhKqHTfEe4QhqzmuuACkM914zGDwBhyXB7HDLcece6Qn6ipjINtO3CLVpTqUFvhULk3zGowawx1FDo4y9BE8fiwmIX8v7PcAakVFW6//WGP8QO6hXqKFjpcUrMWDBvhBpH8qS/+RAEfnpQm0499VeAiYdc6tVIi0YB3TU4n6XOyDCHzctmlq7yGZEwiswhlODspPCj4FnzRhV5VmU3UFZOKkFqUniScXHbFG7qUOVivI0ENpWX3DrMo+djAOtEpGR9eLj5odeHHYFiPF7mEMerd0fLKSjaRsqclQSRMMSR9rdFtsEqBitZ9yctfkrtkrVcGhZrtQCoIIT9xk1XCi0nJTyaouLJqyUZAYX8svqjCMqxOWsSa0r3vqkuMjM4d2YsKQqnSgE8n//quSR+mZzXJX9wPAPhxJCu6ANR4OrBh2ZLdPKPVwmeJTEgrkpKuk2Ty45uqmAp6378zsRzDm76nSVYNUA9pRfYT6kQxRScBL0ad6Y7BQ0TPjw+HNsWBUiNDjcGcDVLEgyLbvMn6ibPRHnLO+M7lIuhdKNCqz7+63TwgMYd0Auik5T6voeUDR4cdhAOkGXyfJhEFxb9IuBdO5O1g=
+
   run:
-      - bundle exec rails db:migrate
-      - bundle exec rails db:migrate RAILS_ENV=test
-      - bundle exec rspec spec
+  - bundle exec rails db:migrate
+  - bundle exec rails db:migrate RAILS_ENV=test
+  - bundle exec rspec spec
