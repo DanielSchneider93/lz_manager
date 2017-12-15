@@ -1,5 +1,10 @@
 window.onload = function(){
 
+var elementExists = document.getElementById("text_field_id");
+
+if (elementExists != null)
+{
+
 text_field_id.oninput = function()
 {
   var x = document.getElementById('text_field_id').value;
@@ -11,11 +16,11 @@ text_field_id.oninput = function()
     document.getElementById("text_field_id").style.border="2px solid red";
     return false;
   } else {
-      document.getElementById("text_field_id").style.border="2px solid green";
-      document.getElementById("feedback").innerHTML = "URL valid ";
-      document.getElementById("feedback").style.color = "green";
+    document.getElementById("text_field_id").style.border="2px solid green";
+    document.getElementById("feedback").innerHTML = " ";
     return true;
 
+  }
   }
 }
 }
