@@ -23,6 +23,7 @@
 <%= form_with(model: [ @group, @group.bookmarks.build ], local: true) do |form| %>
   <p>
     <%= form.text_field :bmark, id:"text_field_id" %>
+    <p id="feedback"></p>
   </p>
   <p>
     <%= form.submit %>
