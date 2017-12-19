@@ -1,15 +1,14 @@
 window.onload = function(){
-
 var elementExists = document.getElementById("text_field_id");
 
 if (elementExists != null)
 {
 
 text_field_id.oninput = function()
-{
+  {
   var x = document.getElementById('text_field_id').value;
-
   var regex = /(www\.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+
   if(!regex .test(x)) {
     document.getElementById("feedback").innerHTML = "URL not valid";
     document.getElementById("feedback").style.color = "red";
